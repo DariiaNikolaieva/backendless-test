@@ -20,5 +20,5 @@ const changeNavType = function () {
   }
 };
 
-window.addEventListener("load", changeNavType);
+document.addEventListener("load", changeNavType);
 window.addEventListener("resize", changeNavType);
