@@ -1,9 +1,6 @@
 const modalBackdrop = document.querySelector("body > div");
 const modalContainer = document.querySelector("body > div:nth-of-type(2)");
 const modalWindow = document.querySelector("body > div:nth-of-type(2) > div");
-console.log(modalBackdrop)
-console.log(modalContainer)
-
 const createModal = function() {
     const modalImg = document.querySelectorAll("img");
     modalImg.forEach(el => el.addEventListener("click", showModal));

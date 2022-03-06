@@ -2,9 +2,12 @@ const navForm = document.querySelector("header form");
 
 const changeNavType = function () {
   if (window.matchMedia("(min-width: 1080px)").matches) {
-    navForm.innerHTML = `<label><input type="radio" name="theme" value="light-theme" checked/>Light Theme</label>
-    <label><input type="radio" name="theme" value="dark-theme" />Dark Theme</label>
-    <label><input type="radio" name="theme" value="custom-theme" />Grey Theme</label>`;
+    navForm.innerHTML = `<label id="light-theme">
+    <input type="radio" name="theme" value="light-theme" checked="checked"/>Light Theme</label>
+    <label id="dark-theme">
+    <input type="radio" name="theme" value="dark-theme" />Dark Theme</label>
+    <label id="custom-theme">
+    <input type="radio" name="theme" value="custom-theme" />Grey Theme</label>`;
   } else if (
     window.matchMedia("(min-width: 641px) and (max-width: 1079px)").matches
   ) {
@@ -20,5 +23,5 @@ const changeNavType = function () {
   }
 };
 
-document.addEventListener("load", changeNavType);
+changeNavType();
 window.addEventListener("resize", changeNavType);
