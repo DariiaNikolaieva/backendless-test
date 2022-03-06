@@ -1,0 +1,164 @@
+:root {
+  /* viewport size */
+  --desktop: 1080px;
+  --mobile: 640px;
+  /* palette */
+  /* light theme */
+  --bgc-lt: #cae9ff;
+  --add-bgc-lt: #5fa8d3;
+  --text-lt: #333333;
+  /* dark theme */
+  --bgc-dt: #333333;
+  --add-bgc-dt: #000000;
+  --text-dt: #eeeeee;
+  /* custom theme */
+  --bgc-ct: #8d8d8d;
+  --add-bgc-ct: #5a5a5a;
+  --text-ct: #eeeeee;
+}
+
+/* reset */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* common */
+
+body {
+  margin: 0;
+  color: var(--text-lt);
+  background-color: var(--bgc-lt);
+  font-family: "Roboto", sans-serif;
+}
+
+body.dark-theme {
+  color: var(--text-dt);
+  background-color: var(--bgc-dt);
+}
+
+body.custom-theme {
+  color: var(--text-ct);
+  background-color: var(--bgc-ct);
+}
+
+/* header */
+
+header {
+  background-color: var(--add-bgc-lt);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+header.dark-theme {
+  background-color: var(--add-bgc-dt);
+}
+
+header.custom-theme {
+  background-color: var(--add-bgc-ct);
+}
+
+header > div {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: var(--desktop);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  font-size: x-large;
+}
+
+header form {
+  display: flex;
+  gap: 25px;
+}
+
+/* main */
+
+main {
+  padding: 20px;
+  margin: 0 auto;
+  width: var(--desktop);
+}
+
+h1 {
+  margin: 20px 0;
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* gallery grid */
+
+main > div {
+  display: grid;
+  grid-template-columns: repeat(4, [col] 1fr);
+  grid-template-rows: repeat(7, [row] 1fr);
+  grid-gap: 20px;
+}
+
+main > div > div:nth-of-type(12n + 1) {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+main > div > div:nth-of-type(12n + 10) {
+  grid-column: 2 / span 3;
+  grid-row: span 3;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--add-bgc-lt);
+  box-shadow: -4px -4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+footer.dark-theme {
+  background-color: var(--add-bgc-dt);
+}
+
+footer.custom-theme {
+  background-color: var(--add-bgc-ct);
+}
+
+footer > div {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: var(--desktop);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer div {
+  display: flex;
+  gap: 30px;
+}
+
+footer div > a {
+  text-decoration: underline;
+}
+
+footer > div > ul {
+  display: flex;
+  font-size: 25px;
+  gap: 12px;
+}
