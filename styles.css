@@ -155,6 +155,7 @@ img {
   display: block;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 /* gallery grid */
@@ -199,7 +200,7 @@ main > div {
 
   main > div > div:nth-of-type(4n + 1) {
     grid-column: span 3;
-    grid-row: span 2;
+    grid-row: span 3;
   }
 }
 
